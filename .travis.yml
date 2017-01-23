@@ -16,13 +16,17 @@ env:
  - PYRAMID_TEST_DB_STRING=sqlite://
 
 install:
+ - pip install -U pytest
  - pip install -r requirements.txt
  - pip install -e .
+ - pip install -e ".[testing]"
 
-script: py.test
+script:
+ - py.test --cov --cov-report=term-missing
+ #- initialize_faculty_db development.ini
 cache:
   directories:
     -passlib
 
 services:
-  -sqllite
+  -mysql
