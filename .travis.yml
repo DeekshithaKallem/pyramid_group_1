@@ -8,5 +8,5 @@ install:
     
 # command to run tests
 script: 
-    - pytest Test.py 
+    #- pytest Test.py 
     - py.test --cov=databases --cov-report=term-missing databases/databases/tests.py -q
