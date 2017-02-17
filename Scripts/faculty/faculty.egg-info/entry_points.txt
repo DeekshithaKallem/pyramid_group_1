@@ -1,5 +1,0 @@
-      [paste.app_factory]
-      main = faculty:main
-      [console_scripts]
-      initialize_faculty_db = faculty.scripts.initializedb:main
-      
